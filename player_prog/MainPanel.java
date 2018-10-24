@@ -41,7 +41,7 @@ public class MainPanel {
   else if(val == 6)b_cpu = new mct2CPU(1);
   else if(val == 7)b_cpu = new hmctCPU(1);
   else if(val == 8)b_cpu = new hmct2CPU(1);
-  else if(val == 9)b_cpu = new AlphaBetaPlayer(1, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+  else if(val == 9)b_cpu = new AlphaBetaPlayer(1, 3, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
 	else {
 	    System.out.println("Unspecified character was entered");
 	    return;
@@ -66,8 +66,9 @@ public class MainPanel {
   else if(val == 4)w_cpu = new mcCPU(-1);
   else if(val == 5)w_cpu = new mctCPU(-1);
   else if(val == 6)w_cpu = new mct2CPU(-1);
-  else if(val == 9)w_cpu = new hmctCPU(-1);
-  else if(val == 9)b_cpu = new AlphaBetaPlayer(1, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+  else if(val == 7)w_cpu = new hmctCPU(-1);
+  else if(val == 8)w_cpu = new hmct2CPU(-1);
+  else if(val == 9)w_cpu = new AlphaBetaPlayer(-1, 3, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
 	else {
 	    System.out.println("Unspecified character was entered");
 	    return;
