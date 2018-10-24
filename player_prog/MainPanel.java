@@ -28,10 +28,9 @@ public class MainPanel {
 	System.out.println("Monte Carlo : 4");
 	System.out.println("Monte Carlo Tree: 5");
 	System.out.println("Monte Carlo Tree2 : 6");
-	// System.out.println("Monte Carlo Tree3 : 7");
-	// System.out.println("Monte Carlo Tree4 : 8");
-	System.out.println("Monte Carlo Tree + Cost function : 9");
-	System.out.println("Monte Carlo Tree + Cost Function2 : 10");
+	System.out.println("Monte Carlo Tree + Cost function : 7");
+	System.out.println("Monte Carlo Tree + Cost Function2 : 8");
+	System.out.println("AlphaBetaPlayer : 9");
 
 	int val = scan.nextInt();
   if(val == 1)b_cpu = new RandomCPU(1);
@@ -40,10 +39,9 @@ public class MainPanel {
   else if(val == 4)b_cpu = new mcCPU(1);
   else if(val == 5)b_cpu = new mctCPU(1);
   else if(val == 6)b_cpu = new mct2CPU(1);
-  // else if(val == 7)b_cpu = new mct3CPU(1);
-  // else if(val == 8)b_cpu = new mct4CPU(1);
-  else if(val == 9)b_cpu = new hmctCPU(1);
-  else if(val == 10)b_cpu = new hmct2CPU(1);
+  else if(val == 7)b_cpu = new hmctCPU(1);
+  else if(val == 8)b_cpu = new hmct2CPU(1);
+  else if(val == 9)b_cpu = new AlphaBetaPlayer(1, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
 	else {
 	    System.out.println("Unspecified character was entered");
 	    return;
@@ -57,10 +55,9 @@ public class MainPanel {
 	System.out.println("Monte Carlo : 4");
 	System.out.println("Monte Carlo Tree: 5");
 	System.out.println("Monte Carlo Tree2 : 6");
-	// System.out.println("Monte Carlo Tree3 : 7");
-	// System.out.println("Monte Carlo Tree4 : 8");
-	System.out.println("Monte Carlo Tree + Cost function : 9");
-	System.out.println("Monte Carlo Tree + Cost Function2 : 10");
+	System.out.println("Monte Carlo Tree + Cost function : 7");
+	System.out.println("Monte Carlo Tree + Cost Function2 : 8");
+	System.out.println("AlphaBetaPlayer : 9");
 
 	val = scan.nextInt();
   if(val == 1)w_cpu = new RandomCPU(-1);
@@ -69,10 +66,8 @@ public class MainPanel {
   else if(val == 4)w_cpu = new mcCPU(-1);
   else if(val == 5)w_cpu = new mctCPU(-1);
   else if(val == 6)w_cpu = new mct2CPU(-1);
-  // else if(val == 7)w_cpu = new mct3CPU(-1);
-  // else if(val == 8)w_cpu = new mct4CPU(-1);
   else if(val == 9)w_cpu = new hmctCPU(-1);
-  else if(val == 10)w_cpu = new hmct2CPU(-1);
+  else if(val == 9)b_cpu = new AlphaBetaPlayer(1, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
 	else {
 	    System.out.println("Unspecified character was entered");
 	    return;

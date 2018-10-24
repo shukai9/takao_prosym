@@ -38,6 +38,9 @@ public class GameState extends Observable {
 	reset(0);
     }
 
+    protected GameState(Boolean noReset) {
+    }
+
     public GameState clone() {
 	GameState other = new GameState();
 	other.data = Arrays.copyOf(data, data.length);
