@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.Scanner;
 
-public class MainPanel {
+public class MainPanel3 {
     //Game status
     GameState state = new GameState();
 
@@ -13,12 +13,11 @@ public class MainPanel {
     //勝敗結果の格納
     int winCount[] = new int[3];
 
-    //進捗状況の表示間隔
-    int lookGame = 100;
-    int bnum = 0;
+    int bnum = 0; //盤面
+    int plong = 0; //ゲームを進める手数
 
 
-    public MainPanel(int count) {
+    public MainPanel3() {
 	Scanner scan = new Scanner(System.in);
 
 	//Black Player
@@ -82,68 +81,56 @@ public class MainPanel {
 	    return;
 	}
 
-  System.out.println("Please select board number");
-  System.out.println("Noamal board : 0");
-  System.out.println("Board number : 1");
-  System.out.println("Board number : 2");
-  System.out.println("Board number : 3");
-  System.out.println("Board number : 4");
-  System.out.println("Board number : 5");
-  System.out.println("Board number : 6");
-  System.out.println("Board number : 7");
-  System.out.println("Board number : 8");
-  System.out.println("Board number : 9");
-  System.out.println("Board number : 10");
-  System.out.println("Board number : 11");
-  System.out.println("Board number : 12");
+  bnum = 0; //通常盤面
 
-  val = scan.nextInt();
-  if (val == 0) bnum = 0;
-  else if (val == 1) bnum = 1;
-  else if (val == 2) bnum = 2;
-  else if (val == 3) bnum = 3;
-  else if (val == 4) bnum = 4;
-  else if (val == 5) bnum = 5;
-  else if (val == 6) bnum = 6;
-  else if (val == 7) bnum = 7;
-  else if (val == 8) bnum = 8;
-  else if (val == 9) bnum = 9;
-  else if (val == 10) bnum = 10;
-  else if (val == 11) bnum = 11;
-  else if (val == 12) bnum = 12;
-  else {
-    System.out.println("Unspecified character was entered");
-    return;
-  }
+  //盤面を何手進めるのか
+  System.out.println("Please input how many moves game");
+  plong = scan.nextInt();
 
-	normalGame(count);
+  normalGame(plong);
 }
 
 
 
     //通常のゲーム
-    public void normalGame(int count) {
+    public void normalGame(int plong) {
 	System.out.println();
-	System.out.println("Loop Start !");
-	for(int i = 0; i < count; i++) {
-	    if(i % lookGame == 0) {
-		System.out.println("Now Game is " + i);
-	    }
-		game();
+		game(plong);
 		state.reset(bnum);
 		b_cpu.reset();
 		w_cpu.reset();
-	}
 
 	System.out.println();
-	System.out.println("---Loop END---");
-	System.out.println("Black win : " + winCount[0]);
-	System.out.println("White win : " + winCount[1]);
-	System.out.println("Draw      : " + winCount[2]);
     }
 
+    //描写を行うメソッド
+    public void textDisplay() {
+	System.out.println();
 
-    public void game() {
+	//左上からマスと駒を表示
+	for(int y = 1; y <= 8; y++) {
+	    for(int x = 1; x <= 8; x++) {
+		System.out.print("|");
+		switch(state.data[x + y * 10]) {
+		case 1:
+		    System.out.print("●"); //黒の駒
+		    break;
+		case -1:
+		    System.out.print("○"); //白の駒
+		    break;
+		default:
+		    System.out.print(" ");
+		}
+	    }
+	    System.out.println("|");
+	}
+	System.out.println("TURN = " + state.turn);
+	System.out.println("PLAYER = " + state.player);
+	System.out.println("DISC = " + state.black + " : " + state.white);
+	System.out.println("\n \n");
+    }
+
+    public void game(int plong) {
 	boolean isLastPass = false;
 
 	for(;;) {
@@ -179,6 +166,7 @@ public class MainPanel {
 		//置ける場所がある場合のみ駒を置く処理を実行
 		state.put(action[0], action[1]);
 	    }
+      if (state.turn==plong) textDisplay();
 	}
     }
 

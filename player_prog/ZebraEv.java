@@ -1,7 +1,7 @@
 //Zebraの評価関数のクラス
 
 class ZebraEv implements OthelloEvaluator {
-    
+
     final static int BLACKSQ = 0; //黒
     final static int EMPTY = 1; //空
     final static int WHITESQ = 2; //白
@@ -20,21 +20,21 @@ class ZebraEv implements OthelloEvaluator {
     static ZebraEv evaluatorFactory(int select) {
 	switch (select) {
 	case 0: return new ZebraEv();
-	case 1: return new PE_W1();
-	case 2: return new PE_W2();
-	case 3: return new PE_W3();
-	case 4: return new PE_W4();
-	case 5: return new PE_W5();
-	case 6: return new PE_W6();
-	case 7: return new PE_W7();
-	case 8: return new PE_W8();
-	case 9: return new PE_W9();
+	// case 1: return new PE_W1();
+	// case 2: return new PE_W2();
+	// case 3: return new PE_W3();
+	// case 4: return new PE_W4();
+	// case 5: return new PE_W5();
+	// case 6: return new PE_W6();
+	// case 7: return new PE_W7();
+	// case 8: return new PE_W8();
+	// case 9: return new PE_W9();
 	default:
 	    new RuntimeException("Illegal Number : Command Line argument");
 	}
 	return null; // error
     }
-	
+
     public ZebraEv() {
 	init_coeffs();
     }
@@ -85,7 +85,7 @@ class ZebraEv implements OthelloEvaluator {
 	    side_to_move = WHITESQ;
 	}
 	disks_played = s.turn;
-	
+
 	for (int i = 0; i < 10; i++) {
 	    for (int j = 0; j < 10; j++) {
 		int pos = 10 * i + j;
@@ -95,9 +95,9 @@ class ZebraEv implements OthelloEvaluator {
 		else if ( s.data[s.at(i,j)] == 2 ) board[pos] = OUTSIDE; //枠外
 	    }
 	}
-	
+
     }
-    
+
     //白の手番の時，局面上の全ての駒を反転するメソッド
     //黒駒 -> 白駒
     //白駒 -> 黒駒
@@ -112,7 +112,7 @@ class ZebraEv implements OthelloEvaluator {
 		    board[pos] = BLACKSQ;
 		}
 	    }
-	}	
+	}
     }
 
     //評価する盤面を複製するメソッド
@@ -122,18 +122,18 @@ class ZebraEv implements OthelloEvaluator {
 	s.put(pos[0], pos[1]);
 	return eval(s);
     }
-    
+
     //局面評価を行うメソッド(第1段階)
     //ゲームの進行状況に応じたスコアテーブルを用意する
     public int eval(GameState s) {
 
 	int eval_phase;
 	int score;
-	
+
 	set_data(s);
 
 	side_to_move = (0 + 2) - side_to_move;
-	
+
 	s.countDisc();
 	if ( s.black == 0 ) {
 	    if( side_to_move == BLACKSQ ) {
@@ -148,7 +148,7 @@ class ZebraEv implements OthelloEvaluator {
 		return -(MIDGAME_WIN + 64);
 	    }
 	}
-	
+
 	eval_phase = eval_map[disks_played];
 	score = set[eval_phase].parity_constant[disks_played & 1];
 
@@ -163,7 +163,7 @@ class ZebraEv implements OthelloEvaluator {
     //各マスの状態より，各パターンのスコアをテーブルから引く
     protected int evalSub(CoeffSet evtable) {
 	int score = 0;
-		
+
 	int pattern0;
 	pattern0 = board[72];
 	pattern0 = 3 * pattern0 + board[22];
@@ -175,7 +175,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[31];
 	pattern0 = 3 * pattern0 + board[21];
 	pattern0 = 3 * pattern0 + board[11];
-	    
+
 	score += evtable.afile2x[pattern0];
 
 	pattern0 = board[77];
@@ -188,7 +188,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[38];
 	pattern0 = 3 * pattern0 + board[28];
 	pattern0 = 3 * pattern0 + board[18];
-	    
+
 	score += evtable.afile2x[pattern0];
 
 	pattern0 = board[27];
@@ -201,7 +201,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[13];
 	pattern0 = 3 * pattern0 + board[12];
 	pattern0 = 3 * pattern0 + board[11];
-	    
+
 	score += evtable.afile2x[pattern0];
 
 	pattern0 = board[77];
@@ -214,7 +214,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[83];
 	pattern0 = 3 * pattern0 + board[82];
 	pattern0 = 3 * pattern0 + board[81];
-	    
+
 	score += evtable.afile2x[pattern0];
 
 	pattern0 = board[82];
@@ -225,9 +225,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[32];
 	pattern0 = 3 * pattern0 + board[22];
 	pattern0 = 3 * pattern0 + board[12];
-	    
+
 	score += evtable.bfile[pattern0];
-	    
+
 	pattern0 = board[87];
 	pattern0 = 3 * pattern0 + board[77];
 	pattern0 = 3 * pattern0 + board[67];
@@ -236,9 +236,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[37];
 	pattern0 = 3 * pattern0 + board[27];
 	pattern0 = 3 * pattern0 + board[17];
-	    
+
 	score += evtable.bfile[pattern0];
-	    
+
 	pattern0 = board[28];
 	pattern0 = 3 * pattern0 + board[27];
 	pattern0 = 3 * pattern0 + board[26];
@@ -247,7 +247,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[23];
 	pattern0 = 3 * pattern0 + board[22];
 	pattern0 = 3 * pattern0 + board[21];
-	    
+
 	score += evtable.bfile[pattern0];
 
 	pattern0 = board[78];
@@ -269,7 +269,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[33];
 	pattern0 = 3 * pattern0 + board[23];
 	pattern0 = 3 * pattern0 + board[13];
-	    
+
 	score += evtable.cfile[pattern0];
 
 	pattern0 = board[86];
@@ -280,9 +280,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[36];
 	pattern0 = 3 * pattern0 + board[26];
 	pattern0 = 3 * pattern0 + board[16];
-	  
+
 	score += evtable.cfile[pattern0];
-	    
+
 	pattern0 = board[38];
 	pattern0 = 3 * pattern0 + board[37];
 	pattern0 = 3 * pattern0 + board[36];
@@ -291,7 +291,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[33];
 	pattern0 = 3 * pattern0 + board[32];
 	pattern0 = 3 * pattern0 + board[31];
-	    
+
 	score += evtable.cfile[pattern0];
 
 	pattern0 = board[68];
@@ -302,7 +302,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[63];
 	pattern0 = 3 * pattern0 + board[62];
 	pattern0 = 3 * pattern0 + board[61];
-	    
+
 	score += evtable.cfile[pattern0];
 
 	pattern0 = board[84];
@@ -313,7 +313,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[34];
 	pattern0 = 3 * pattern0 + board[24];
 	pattern0 = 3 * pattern0 + board[14];
-	    
+
 	score += evtable.dfile[pattern0];
 
 	pattern0 = board[85];
@@ -335,9 +335,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[43];
 	pattern0 = 3 * pattern0 + board[42];
 	pattern0 = 3 * pattern0 + board[41];
-	 
+
 	score += evtable.dfile[pattern0];
-  
+
 	pattern0 = board[58];
 	pattern0 = 3 * pattern0 + board[57];
 	pattern0 = 3 * pattern0 + board[56];
@@ -348,7 +348,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[51];
 
 	score += evtable.dfile[pattern0];
-	    
+
 	pattern0 = board[88];
 	pattern0 = 3 * pattern0 + board[77];
 	pattern0 = 3 * pattern0 + board[66];
@@ -359,7 +359,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[11];
 
 	score += evtable.diag8[pattern0];
-	    
+
 	pattern0 = board[81];
 	pattern0 = 3 * pattern0 + board[72];
 	pattern0 = 3 * pattern0 + board[63];
@@ -368,7 +368,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[36];
 	pattern0 = 3 * pattern0 + board[27];
 	pattern0 = 3 * pattern0 + board[18];
-	 
+
 	score += evtable.diag8[pattern0];
 
 	pattern0 = board[78];
@@ -378,9 +378,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[34];
 	pattern0 = 3 * pattern0 + board[23];
 	pattern0 = 3 * pattern0 + board[12];
-	  
+
 	score += evtable.diag7[pattern0];
-	    
+
 	pattern0 = board[87];
 	pattern0 = 3 * pattern0 + board[76];
 	pattern0 = 3 * pattern0 + board[65];
@@ -390,7 +390,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[21];
 
 	score += evtable.diag7[pattern0];
-	    
+
 	pattern0 = board[71];
 	pattern0 = 3 * pattern0 + board[62];
 	pattern0 = 3 * pattern0 + board[53];
@@ -398,9 +398,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[35];
 	pattern0 = 3 * pattern0 + board[26];
 	pattern0 = 3 * pattern0 + board[17];
-	    
+
 	score += evtable.diag7[pattern0];
-	    
+
 	pattern0 = board[82];
 	pattern0 = 3 * pattern0 + board[73];
 	pattern0 = 3 * pattern0 + board[64];
@@ -410,7 +410,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[28];
 
 	score += evtable.diag7[pattern0];
-	    
+
 	pattern0 = board[68];
 	pattern0 = 3 * pattern0 + board[57];
 	pattern0 = 3 * pattern0 + board[46];
@@ -419,7 +419,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[13];
 
 	score += evtable.diag6[pattern0];
-	    
+
 	pattern0 = board[86];
 	pattern0 = 3 * pattern0 + board[75];
 	pattern0 = 3 * pattern0 + board[64];
@@ -428,7 +428,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[31];
 
 	score += evtable.diag6[pattern0];
-	    
+
 	pattern0 = board[61];
 	pattern0 = 3 * pattern0 + board[52];
 	pattern0 = 3 * pattern0 + board[43];
@@ -437,14 +437,14 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[16];
 
 	score += evtable.diag6[pattern0];
-	    
+
 	pattern0 = board[83];
 	pattern0 = 3 * pattern0 + board[74];
 	pattern0 = 3 * pattern0 + board[65];
 	pattern0 = 3 * pattern0 + board[56];
 	pattern0 = 3 * pattern0 + board[47];
 	pattern0 = 3 * pattern0 + board[38];
-	    
+
 	score += evtable.diag6[pattern0];
 	pattern0 = board[58];
 	pattern0 = 3 * pattern0 + board[47];
@@ -453,59 +453,59 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[14];
 
 	score += evtable.diag5[pattern0];
-	    
+
 	pattern0 = board[85];
 	pattern0 = 3 * pattern0 + board[74];
 	pattern0 = 3 * pattern0 + board[63];
 	pattern0 = 3 * pattern0 + board[52];
 	pattern0 = 3 * pattern0 + board[41];
-	    
+
 	score += evtable.diag5[pattern0];
-	    
+
 	pattern0 = board[51];
 	pattern0 = 3 * pattern0 + board[42];
 	pattern0 = 3 * pattern0 + board[33];
 	pattern0 = 3 * pattern0 + board[24];
 	pattern0 = 3 * pattern0 + board[15];
-	    
+
 	score += evtable.diag5[pattern0];
-	    
+
 	pattern0 = board[84];
 	pattern0 = 3 * pattern0 + board[75];
 	pattern0 = 3 * pattern0 + board[66];
 	pattern0 = 3 * pattern0 + board[57];
 	pattern0 = 3 * pattern0 + board[48];
-	    
+
 	score += evtable.diag5[pattern0];
-	    
+
 	pattern0 = board[48];
 	pattern0 = 3 * pattern0 + board[37];
 	pattern0 = 3 * pattern0 + board[26];
 	pattern0 = 3 * pattern0 + board[15];
 
 	score += evtable.diag4[pattern0];
-	    
+
 	pattern0 = board[84];
 	pattern0 = 3 * pattern0 + board[73];
 	pattern0 = 3 * pattern0 + board[62];
 	pattern0 = 3 * pattern0 + board[51];
 
 	score += evtable.diag4[pattern0];
-	
+
 	pattern0 = board[41];
 	pattern0 = 3 * pattern0 + board[32];
 	pattern0 = 3 * pattern0 + board[23];
 	pattern0 = 3 * pattern0 + board[14];
-	    
+
 	score += evtable.diag4[pattern0];
-	    
+
 	pattern0 = board[85];
 	pattern0 = 3 * pattern0 + board[76];
 	pattern0 = 3 * pattern0 + board[67];
 	pattern0 = 3 * pattern0 + board[58];
-	    
+
 	score += evtable.diag4[pattern0];
-	    
+
 	pattern0 = board[33];
 	pattern0 = 3 * pattern0 + board[32];
 	pattern0 = 3 * pattern0 + board[31];
@@ -515,9 +515,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[13];
 	pattern0 = 3 * pattern0 + board[12];
 	pattern0 = 3 * pattern0 + board[11];
-	    
+
 	score += evtable.corner33[pattern0];
-	    
+
 	pattern0 = board[63];
 	pattern0 = 3 * pattern0 + board[62];
 	pattern0 = 3 * pattern0 + board[61];
@@ -527,9 +527,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[83];
 	pattern0 = 3 * pattern0 + board[82];
 	pattern0 = 3 * pattern0 + board[81];
-	    
+
 	score += evtable.corner33[pattern0];
-	
+
 	pattern0 = board[36];
 	pattern0 = 3 * pattern0 + board[37];
 	pattern0 = 3 * pattern0 + board[38];
@@ -539,7 +539,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[16];
 	pattern0 = 3 * pattern0 + board[17];
 	pattern0 = 3 * pattern0 + board[18];
-	    
+
 	score += evtable.corner33[pattern0];
 
 	pattern0 = board[66];
@@ -551,9 +551,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[86];
 	pattern0 = 3 * pattern0 + board[87];
 	pattern0 = 3 * pattern0 + board[88];
-	    
+
 	score += evtable.corner33[pattern0];
-	    
+
 	pattern0 = board[25];
 	pattern0 = 3 * pattern0 + board[24];
 	pattern0 = 3 * pattern0 + board[23];
@@ -564,9 +564,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[13];
 	pattern0 = 3 * pattern0 + board[12];
 	pattern0 = 3 * pattern0 + board[11];
-	    
+
 	score += evtable.corner52[pattern0];
-	    
+
 	pattern0 = board[75];
 	pattern0 = 3 * pattern0 + board[74];
 	pattern0 = 3 * pattern0 + board[73];
@@ -577,9 +577,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[83];
 	pattern0 = 3 * pattern0 + board[82];
 	pattern0 = 3 * pattern0 + board[81];
-	  
+
 	score += evtable.corner52[pattern0];
-	    
+
 	pattern0 = board[24];
 	pattern0 = 3 * pattern0 + board[25];
 	pattern0 = 3 * pattern0 + board[26];
@@ -592,7 +592,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[18];
 
 	score += evtable.corner52[pattern0];
-	    
+
 	pattern0 = board[74];
 	pattern0 = 3 * pattern0 + board[75];
 	pattern0 = 3 * pattern0 + board[76];
@@ -605,7 +605,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[88];
 
 	score += evtable.corner52[pattern0];
-	    
+
 	pattern0 = board[52];
 	pattern0 = 3 * pattern0 + board[42];
 	pattern0 = 3 * pattern0 + board[32];
@@ -616,9 +616,9 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[31];
 	pattern0 = 3 * pattern0 + board[21];
 	pattern0 = 3 * pattern0 + board[11];
-	    
+
 	score += evtable.corner52[pattern0];
-	    
+
 	pattern0 = board[57];
 	pattern0 = 3 * pattern0 + board[47];
 	pattern0 = 3 * pattern0 + board[37];
@@ -631,7 +631,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[18];
 
 	score += evtable.corner52[pattern0];
-	    
+
 	pattern0 = board[42];
 	pattern0 = 3 * pattern0 + board[52];
 	pattern0 = 3 * pattern0 + board[62];
@@ -644,7 +644,7 @@ class ZebraEv implements OthelloEvaluator {
 	pattern0 = 3 * pattern0 + board[81];
 
 	score += evtable.corner52[pattern0];
-	    
+
 	pattern0 = board[47];
 	pattern0 = 3 * pattern0 + board[57];
 	pattern0 = 3 * pattern0 + board[67];
@@ -659,5 +659,5 @@ class ZebraEv implements OthelloEvaluator {
 	score += evtable.corner52[pattern0];
 	return score;
     }
-	
+
 }

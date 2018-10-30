@@ -1,5 +1,4 @@
 // Zebra の評価関数を用いて alpha-beta 探索を行うプレイヤ
-//評価関数はコマンドライン引数で変更可能
 
 import java.util.*;
 import java.util.*;
@@ -13,8 +12,9 @@ public class AlphaBetaPlayer extends CPU {
 	// public AlphaBetaPlayer(int c, int depth, int pattern) throws Exception {
 		super(c);
 		SEARCH_DEPTH = depth;
-		if (pattern < 10) { evaluator = ZebraEv.evaluatorFactory(pattern); }
-		else { evaluator = new WeakEv(); }
+		// if (pattern < 10) { evaluator = ZebraEv.evaluatorFactory(pattern); }
+		// else { evaluator = new WeakEv(); }
+		evaluator = ZebraEv.evaluatorFactory(pattern);
 	}
 
 	int getEV(GameState state, int curPlayer) {

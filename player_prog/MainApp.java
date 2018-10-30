@@ -10,32 +10,34 @@ import java.awt.Container;
 public class MainApp {
     public MainApp() {}
 
-    private void mainWithGUI() {
+  /*  private void mainWithGUI() {
 	MainApp2 panel = new MainApp2();
 	panel.setVisible(true);
+} */
+  private void NormalGame() {
+	   Scanner scan = new Scanner(System.in);
+	   System.out.println("Please input roop count");
+	   int count = scan.nextInt();
+
+	   MainPanel panel = new MainPanel(count);
     }
 
-    private void mainWithoutGUI() {
-	Scanner scan = new Scanner(System.in);
-	System.out.println("Please input roop count");
-	int count = scan.nextInt();
-
-	MainPanel panel = new MainPanel(count);
+  private void MiddleBoard() {
+	   MainPanel3 panel = new MainPanel3();
     }
 
 
     public static void main(String[] args) {
-	System.out.println("Please select use GUI");
-	System.out.println("Not need GUI : 1");
-	System.out.println("Need GUI : 2");
+  System.out.println("Normal Game : 1");
+	System.out.println("Make the middle board : 2");
 
 	Scanner scan = new Scanner(System.in);
 	int val = scan.nextInt();
 
 	if(val == 1) {
-	    new MainApp().mainWithoutGUI();
+	    new MainApp().NormalGame();
 	} else if(val == 2) {
-	    new MainApp().mainWithGUI();
+	    new MainApp().MiddleBoard();
 	} else {
 	    System.out.println("Unspecified character was entered");
 	}
