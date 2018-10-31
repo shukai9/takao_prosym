@@ -29,9 +29,9 @@ public class MainPanel3 {
 	System.out.println("Monte Carlo Tree2 : 6");
 	System.out.println("Monte Carlo Tree + Cost function : 7");
 	System.out.println("Monte Carlo Tree + Cost Function2 : 8");
-	System.out.println("AlphaBetaPlayer3 : 9");
-	System.out.println("AlphaBetaPlayer1 : 10");
-	System.out.println("AlphaBetaPlayer2 : 11");
+	System.out.println("AlphaBetaPlayer1 : 9");
+	System.out.println("AlphaBetaPlayer2 : 10");
+	System.out.println("AlphaBetaPlayer3 : 11");
 
 	int val = scan.nextInt();
   if(val == 1)b_cpu = new RandomCPU(1);
@@ -42,9 +42,9 @@ public class MainPanel3 {
   else if(val == 6)b_cpu = new mct2CPU(1);
   else if(val == 7)b_cpu = new hmctCPU(1);
   else if(val == 8)b_cpu = new hmct2CPU(1);
-  else if(val == 9)b_cpu = new AlphaBetaPlayer(1, 3, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
-  else if(val == 10)b_cpu = new AlphaBetaPlayer(1, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
-  else if(val == 11)b_cpu = new AlphaBetaPlayer(1, 2, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+  else if(val == 9)b_cpu = new AlphaBetaPlayer(1, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+  else if(val == 10)b_cpu = new AlphaBetaPlayer(1, 2, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+  else if(val == 11)b_cpu = new AlphaBetaPlayer(1, 3, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
 	else {
 	    System.out.println("Unspecified character was entered");
 	    return;
@@ -60,9 +60,9 @@ public class MainPanel3 {
 	System.out.println("Monte Carlo Tree2 : 6");
 	System.out.println("Monte Carlo Tree + Cost function : 7");
 	System.out.println("Monte Carlo Tree + Cost Function2 : 8");
-	System.out.println("AlphaBetaPlayer3 : 9");
-	System.out.println("AlphaBetaPlayer1 : 10");
-	System.out.println("AlphaBetaPlayer2 : 11");
+	System.out.println("AlphaBetaPlayer1 : 9");
+	System.out.println("AlphaBetaPlayer2 : 10");
+	System.out.println("AlphaBetaPlayer3 : 11");
 
 	val = scan.nextInt();
   if(val == 1)w_cpu = new RandomCPU(-1);
@@ -73,9 +73,9 @@ public class MainPanel3 {
   else if(val == 6)w_cpu = new mct2CPU(-1);
   else if(val == 7)w_cpu = new hmctCPU(-1);
   else if(val == 8)w_cpu = new hmct2CPU(-1);
-  else if(val == 9)w_cpu = new AlphaBetaPlayer(-1, 3, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
-  else if(val == 10)w_cpu = new AlphaBetaPlayer(-1, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
-  else if(val == 11)w_cpu = new AlphaBetaPlayer(-1, 2, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+  else if(val == 9)w_cpu = new AlphaBetaPlayer(-1, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+  else if(val == 10)w_cpu = new AlphaBetaPlayer(-1, 2, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+  else if(val == 11)w_cpu = new AlphaBetaPlayer(-1, 3, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
 	else {
 	    System.out.println("Unspecified character was entered");
 	    return;
@@ -155,7 +155,11 @@ public class MainPanel3 {
 			new RuntimeException("Illegal Move by Black : (-1, -1)" );
 		}
 		//置ける場所がある場合のみ駒を置く処理を実行
-		state.put(action[0], action[1]);
+		state.put(action[0], action[1]); // (x, y)
+    //Zebraの棋譜入力用
+    int firstIndex = (int)'A'; // アルファベットの最初の文字
+    String s = String.valueOf((char)(firstIndex + action[0] - 1));
+    System.out.print(s + action[1]);
 	    }
 	    else { //white
 		//置く場所はCPU内のdecideメソッドで決定
@@ -165,8 +169,27 @@ public class MainPanel3 {
 		}
 		//置ける場所がある場合のみ駒を置く処理を実行
 		state.put(action[0], action[1]);
+    //Zebraの棋譜入力用
+    int firstIndex = (int)'A'; // アルファベットの最初の文字
+    String s = String.valueOf((char)(firstIndex + action[0] - 1));
+    System.out.print(s + action[1]);
 	    }
-      if (state.turn==plong) textDisplay();
+      // 指定のターンに実行
+      int flag = 1;
+      if (state.turn==plong){
+        System.out.println();
+        textDisplay();
+         for (int y = 1; y < 9; y++){
+           for (int x = 1; x < 9; x++){
+             if (state.data[x+y*10]==1 || state.data[x+y*10]==-1){
+               System.out.print("data[" + (x+y*10) + "] = " + state.data[x+y*10] + " ");
+               flag++;
+               if (flag == 6){ System.out.println(); flag = 1;}
+             }
+           }
+         }
+       }
+
 	}
     }
 

@@ -456,10 +456,10 @@ public class GameState extends Observable {
 
 	//(初期盤面)
 	else{
-	   data[at(x, y)] = 1;
-	   data[at(x, y-1)] = -1;
-	   data[at(x-1, y)] = -1;
-	   data[at(x-1, y-1)] = 1;
+	   data[at(x, y)] = -1;
+	   data[at(x, y-1)] = 1;
+	   data[at(x-1, y)] = 1;
+	   data[at(x-1, y-1)] = -1;
       }
 
 	//壁を作成
