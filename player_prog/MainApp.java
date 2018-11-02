@@ -1,46 +1,15 @@
-
-
-
-import javax.swing.*;
 import java.util.Scanner;
 
-
-import java.awt.Container;
-
 public class MainApp {
-    public MainApp() {}
+  public MainApp() {}
 
-  /*  private void mainWithGUI() {
-	MainApp2 panel = new MainApp2();
-	panel.setVisible(true);
-} */
-  private void NormalGame() {
-	   Scanner scan = new Scanner(System.in);
-	   System.out.println("Please input roop count");
-	   int count = scan.nextInt();
+  private static void normalGame(int gamecount, CPU b_cpu, CPU w_cpu) {
+    GameController panel = new GameController(gamecount, b_cpu, w_cpu);
+  }
 
-	   MainPanel panel = new MainPanel(count);
-    }
-
-  private void MiddleBoard(int gamecount) {
-	   MainPanel3 panel = new MainPanel3(gamecount);
-    }
-
-
-    public static void main(String[] args) {
-  System.out.println("Normal Game : 1");
-	System.out.println("Make the middle board : 2");
-
-	Scanner scan = new Scanner(System.in);
-	int val = scan.nextInt();
-
-	if(val == 1) {
-	    new MainApp().NormalGame();
-	} else if(val == 2) {
-    System.out.println("Please input game count :");
-    val = scan.nextInt();
-    GetState gstate = new GetState(val);
-    for (int i = 0; i < GetState.bnum; i++){
+  private static void middleBoardGame(int gamecount) {
+    GetState gstate = new GetState(gamecount);
+    for (int i = 0; i < GetState.bnum; i++) {
       System.out.println();
       System.out.println("------");
       System.out.println("gamecount : " + i);
@@ -48,10 +17,32 @@ public class MainApp {
       System.out.println("w_cpu : " + GetState.w_cpu[i]);
       System.out.println("turn : " + GetState.turn[i]);
       System.out.println("------");
-	    new MainApp().MiddleBoard(i);
+      GameController3 panel = new GameController3(i);
     }
-	} else {
-	    System.out.println("Unspecified character was entered");
-	}
+  }
+
+  static void usage() {
+    System.err.println("java MainApp gamestyle gamecount b_player w_player");
+    System.err.println("  gamestyle: 1 for normal games and 2 for making middle boards");
+    System.err.println("  b_player, w_player: see PlayerSelector.java");
+  }
+
+  public static void main(String[] args) throws Exception {
+    if (args.length != 4) {
+      usage();
+      System.exit(1);
     }
+
+    int gamestyle = Integer.parseInt(args[0]);
+    int gamecount = Integer.parseInt(args[1]);
+    CPU b_cpu = PlayerSelector.getPlayer(1, args[2]);
+    CPU w_cpu = PlayerSelector.getPlayer(-1, args[3]);
+    if(gamestyle == 1) {
+      normalGame(gamecount, b_cpu, w_cpu);
+    } else if (gamestyle == 2) {
+      middleBoardGame(gamecount);
+    } else {
+      System.out.println("Wrong gamestyle: " + gamestyle);
+    }
+  }
 }

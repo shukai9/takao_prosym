@@ -1,50 +1,25 @@
 import java.util.*;
 
 public class RandomCPU extends CPU {
+  Random rnd;
 
-    //自分が置くターンを判別する関数
-    int color;
-    int size = 10;
+  public RandomCPU(int c, int seed) {
+    super(c);
+    rnd = new Random(seed);
+  }
 
-    //ランダムクラスのインスタンス化
-    Random rnd = new Random();
+  int[] decide(GameState state) {
 
-    public RandomCPU(int c) {
-	super(c);
+    //置ける場所を記憶するリスト
+    ArrayList<int[]> array = state.putPoint();
+
+    //置ける場所がない場合は，座標が{-1, -1}として返す
+    if(array.size() <= 0) {
+      int pos[] = {-1, -1};
+      return pos;
     }
 
-    int[] decide(GameState state) {
-
-	//置ける場所を記憶するリスト
-	ArrayList<int[]> array = new ArrayList<int[]>();
-
-	//盤面の空マスを置けるかチェック
-	for(int y = 1; y < size; y++) {
-	    for(int x = 1; x < size; x++) {
-
-		//既に駒があればパス
-		if(state.data[x + y * 10] != 0) continue;
-
-		//置けるマスの時，候補として記憶
-		if(state.canReverse(x, y) == true) {
-		    int pos[] = {x, y};
-		    array.add(pos); //リストに置けるマスの候補を追加
-		}
-	    }
-	}
-
-	//ランダム選択
-
-	//置ける場所がない場合は，座標が{-1, -1}として返す
-	if(array.size() <= 0) {
-	    int pos[] = {-1, -1};
-	    return pos;
-	}
-
-	//乱数を生成してランダムで置く場所を決定
-	int index = rnd.nextInt(array.size());
-
-	//乱数で選ばれた置ける場所を返す
-	return array.get(index);
-    }
+    //乱数で選ばれた置ける場所を返す
+    return array.get(rnd.nextInt(array.size()));
+  }
 }
