@@ -22,8 +22,8 @@ public class MainApp {
 	   MainPanel panel = new MainPanel(count);
     }
 
-  private void MiddleBoard() {
-	   MainPanel3 panel = new MainPanel3();
+  private void MiddleBoard(int gamecount) {
+	   MainPanel3 panel = new MainPanel3(gamecount);
     }
 
 
@@ -37,7 +37,19 @@ public class MainApp {
 	if(val == 1) {
 	    new MainApp().NormalGame();
 	} else if(val == 2) {
-	    new MainApp().MiddleBoard();
+    System.out.println("Please input game count :");
+    val = scan.nextInt();
+    GetState gstate = new GetState(val);
+    for (int i = 0; i < GetState.bnum; i++){
+      System.out.println();
+      System.out.println("------");
+      System.out.println("gamecount : " + i);
+      System.out.println("b_cpu : " + GetState.b_cpu[i]);
+      System.out.println("w_cpu : " + GetState.w_cpu[i]);
+      System.out.println("turn : " + GetState.turn[i]);
+      System.out.println("------");
+	    new MainApp().MiddleBoard(i);
+    }
 	} else {
 	    System.out.println("Unspecified character was entered");
 	}

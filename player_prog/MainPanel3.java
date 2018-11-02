@@ -17,23 +17,11 @@ public class MainPanel3 {
     int plong = 0; //ゲームを進める手数
 
 
-    public MainPanel3() {
+    public MainPanel3(int gamecount) {
 	Scanner scan = new Scanner(System.in);
 
 	//Black Player
-  System.out.println("RandomCPU : 1");
-	System.out.println("hyoukaCPU : 2");
-	System.out.println("hyouka2CPU : 3");
-	System.out.println("Monte Carlo : 4");
-	System.out.println("Monte Carlo Tree: 5");
-	System.out.println("Monte Carlo Tree2 : 6");
-	System.out.println("Monte Carlo Tree + Cost function : 7");
-	System.out.println("Monte Carlo Tree + Cost Function2 : 8");
-	System.out.println("AlphaBetaPlayer1 : 9");
-	System.out.println("AlphaBetaPlayer2 : 10");
-	System.out.println("AlphaBetaPlayer3 : 11");
-
-	int val = scan.nextInt();
+	int val = GetState.b_cpu[gamecount];
   if(val == 1)b_cpu = new RandomCPU(1);
   else if(val == 2)b_cpu = new hyoukaCPU(1);
   else if(val == 3)b_cpu = new hyouka2CPU(1);
@@ -51,20 +39,7 @@ public class MainPanel3 {
 	}
 
 	//White Player
-  System.out.println("Please select White Player");
-	System.out.println("RandomCPU : 1");
-	System.out.println("hyoukaCPU : 2");
-	System.out.println("hyouka2CPU : 3");
-	System.out.println("Monte Carlo : 4");
-	System.out.println("Monte Carlo Tree: 5");
-	System.out.println("Monte Carlo Tree2 : 6");
-	System.out.println("Monte Carlo Tree + Cost function : 7");
-	System.out.println("Monte Carlo Tree + Cost Function2 : 8");
-	System.out.println("AlphaBetaPlayer1 : 9");
-	System.out.println("AlphaBetaPlayer2 : 10");
-	System.out.println("AlphaBetaPlayer3 : 11");
-
-	val = scan.nextInt();
+	val = GetState.w_cpu[gamecount];
   if(val == 1)w_cpu = new RandomCPU(-1);
   else if(val == 2)w_cpu = new hyoukaCPU(-1);
   else if(val == 3)w_cpu = new hyouka2CPU(-1);
@@ -84,8 +59,7 @@ public class MainPanel3 {
   bnum = 0; //通常盤面
 
   //盤面を何手進めるのか
-  System.out.println("Please input how many moves game");
-  plong = scan.nextInt();
+    plong = GetState.turn[gamecount];
 
   normalGame(plong);
 }
@@ -174,8 +148,9 @@ public class MainPanel3 {
     String s = String.valueOf((char)(firstIndex + action[0] - 1));
     System.out.print(s + action[1]);
 	    }
+
       // 指定のターンに実行
-      int flag = 1;
+      int flag = 1; // 出力の体裁を整える
       if (state.turn==plong){
         System.out.println();
         textDisplay();
@@ -188,6 +163,7 @@ public class MainPanel3 {
              }
            }
          }
+         break; // ゲーム終了
        }
 
 	}
