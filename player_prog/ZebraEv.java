@@ -85,7 +85,7 @@ class ZebraEv implements OthelloEvaluator {
     } else if(s.player == -1) {
       side_to_move = WHITESQ;
     }
-    disks_played = s.turn;
+    disks_played = s.getTurn();
 
     for (int i = 0; i < 10; i++) {
       for (int j = 0; j < 10; j++) {
@@ -134,7 +134,6 @@ class ZebraEv implements OthelloEvaluator {
 
     side_to_move = (0 + 2) - side_to_move;
 
-    s.countDisc();
     if ( s.black == 0 ) {
       if( side_to_move == BLACKSQ ) {
         return -(MIDGAME_WIN + 64);

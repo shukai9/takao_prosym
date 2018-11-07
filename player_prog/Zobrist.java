@@ -15,9 +15,9 @@ public class Zobrist {
 
   // 0 ==> c へと変化させる場合
   public static int put(int zobrist, int pos, int c) {
-    if(c == mctGameState.BLACK) {
+    if(c == GameState.BLACK) {
       return instance.putBlack(zobrist, pos);
-    } else if(c == mctGameState.WHITE) {
+    } else if(c == GameState.WHITE) {
       return instance.putWhite(zobrist, pos);
     } else {
       throw new RuntimeException("error color c");
@@ -26,11 +26,11 @@ public class Zobrist {
 
   // -c ==< c へと変化させる場合
   public static int reverse(int zobrist, int pos, int c) {
-    if(c == mctGameState.BLACK) {
+    if(c == GameState.BLACK) {
       zobrist = instance.unputWhite(zobrist, pos);
       zobrist = instance.putBlack(zobrist, pos);
       return zobrist;
-    } else if(c == mctGameState.WHITE) {
+    } else if(c == GameState.WHITE) {
       zobrist = instance.unputBlack(zobrist, pos);
       zobrist = instance.putWhite(zobrist, pos);
       return zobrist;
@@ -44,15 +44,15 @@ public class Zobrist {
     int zobrist = 0;
     for(int i = 0; i < state.length; i++) {
       switch(state[i]) {
-      case mctGameState.BLACK:
+      case GameState.BLACK:
         zobrist = putBlack(zobrist, i);
         break;
-      case mctGameState.WHITE:
+      case GameState.WHITE:
         zobrist = putWhite(zobrist, i);
         break;
       }
     }
-    if(player == mctGameState.WHITE) {
+    if(player == GameState.WHITE) {
       zobrist = zobrist ^ 0x1;
     }
     return zobrist;

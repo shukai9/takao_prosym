@@ -74,14 +74,13 @@ public class AlphaBetaPlayer extends CPU {
     if (state.checkPass()) {
       // 終了状態
       if (state.isLastPass) {
-        state.countDisc();
         int value = 1024 * (state.black - state.white) * this.color;
         // System.out.printf("end of game depth %d with (%d, %d, %d)\n", depth, -1, -1, value);
         return new PosEV(-1, -1, value);
       }
 
       // パスの場合は深さを減らさずに次へ
-      state.Pass();
+      state.pass();
       PosEV next = searchAlphaBeta(state, depth, alpha, beta, !isMaximizePlayer);
       // System.out.printf("pass depth %d with (%d, %d, %d)\n", depth, -1, -1, next.value);
       return new PosEV(-1, -1, next.value);
@@ -165,7 +164,7 @@ public class AlphaBetaPlayer extends CPU {
       int x = sc.nextInt();
       int y = sc.nextInt();
       if (x == -1) {
-        state.Pass();
+        state.pass();
       } else {
         state.put(x, y);
       }

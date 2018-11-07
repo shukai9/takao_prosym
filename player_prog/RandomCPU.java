@@ -11,7 +11,7 @@ public class RandomCPU extends CPU {
   int[] decide(GameState state) {
 
     //置ける場所を記憶するリスト
-    ArrayList<int[]> array = state.putPoint();
+    ArrayList<int[]> array = state.putPoint(false);
 
     //置ける場所がない場合は，座標が{-1, -1}として返す
     if(array.size() <= 0) {

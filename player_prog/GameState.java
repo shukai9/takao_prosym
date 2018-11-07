@@ -26,11 +26,11 @@ public class GameState {
   }
 
   int data []; //現在の駒が置かれている場所を保持する多次元配列 0 : 置かれていない, 1 : 黒, -1 : 白
-  int turn; //何ターン目か示す変数(全ターン数は60)
   int player; //どちらのターンか示す(1で黒, -1で白)
   int black; //黒の個数
   int white; //白の個数
   boolean isLastPass;
+	int zobhash;
 
   //最初の状態を作るメソッド
   public GameState() {
@@ -40,24 +40,14 @@ public class GameState {
   protected GameState(Boolean noReset) {
   }
 
-  public static GameState makeStateFrom(int[] d, int t, int p) {
-    GameState ret = new GameState(true);
-    ret.data = Arrays.copyOf(d, d.length);
-    ret.turn = t;
-    ret.player = p;
-    ret.countDisc(); // black, white
-    // isLastPass ??
-    return ret;
-  }
-
   public GameState clone() {
     GameState other = new GameState(true);
     other.data = Arrays.copyOf(data, data.length);
-    other.turn = turn;
     other.player = player;
     other.black = black;
     other.white = white;
     other.isLastPass = isLastPass;
+		other.zobhash = zobhash;
     return other;
   }
 
@@ -65,18 +55,16 @@ public class GameState {
   public boolean put(int x, int y) {
     //既に駒があれば置けない
     if(data[at(x,y)] != 0) return false;
-
-    //リバースできない場所には置けない
-    //reverseメソッドを利用して判定
-    if(reverse(x,y,true) == false) {
-      return false;
-    }
+    //リバースする (失敗したときは false で返す)
+    if(!reverse(x,y,true)) return false;
 
     //駒を置く
     data[at(x,y)] = player;
+		if (player == BLACK) black++; else white++;
+    zobhash = Zobrist.put(zobhash, at(x, y), player);
+
     player *= -1;
-    turn++;
-    countDisc();
+    zobhash = Zobrist.color(zobhash);
 
     isLastPass = false;
 
@@ -88,50 +76,39 @@ public class GameState {
     //既に駒があれば置けない
     if(data[at(x,y)] != 0) return false;
 
-    //置けるか確かめた結果を格納する変数
-    boolean reversed = false;
-
-    //for文で場所を変えていく
+		int numReversed = 0;
     for(int i = 0; i < 8; i++) {
       //隣のマスの値を取得
       int nextState = data[atDir(x, y, i, 1)];
 
-      //隣マスの駒がプレイヤー駒の場合，走査を終了し次の方向へ移る
-      if(nextState == player) {
-        continue;
-      }
-      //隣マスが空きor壁の場合，走査を終了し次の方向へ移る
-      else if(nextState == 0 || nextState == 2) {
+      //隣マスの駒がプレイヤー駒，空き，壁の場合，走査を終了し次の方向へ移る
+      if(nextState == player || nextState == 0 || nextState == 2) {
         continue;
       }
 
       //隣の隣から端まで操作して，自分の色があればリバースする
       //確かめる駒と駒を置く位置との距離を入れる変数
-      int j = 2;
-      while(true) {
-        //自分の駒がある場合
-        if(data[atDir(x, y, i, j)] == player) {
-          //変数が正(置き換える処理)の場合，置き換える
-          if(doReverse) {
-            for(int k = 1; k < j; k++) {
-              data[atDir(x, y, i, k)] *= -1;
-            }
-          }
+      for(int len = 2; ; len++) {
+        int over = data[atDir(x, y, i, len)];
+        if(over == 2 || over == 0) break; //空白または壁に到達したら終了
+        if(over == -player) continue; //継続
 
-          //置けるマスがあったと判断
-          reversed = true;
-          break;
+        //自分の色があれば間の石を入れ替えて終了
+        for(int k = 1; k < len; k++) {
+					if (!doReverse) return true; // 1方向でも返すことができれば置ける
+          numReversed++;
+					int betweenPos = atDir(x, y, i, k);
+					data[betweenPos] *= -1; //反転
+					zobhash = Zobrist.reverse(zobhash, betweenPos, player);
         }
-
-        //空白または壁に到達すれば終了
-        if(data[atDir(x, y, i, j)] == 2 || data[atDir(x, y, i, j)] == 0) {
-          break;
-        }
-        j++;
+        break;
       }
     }
 
-    return reversed;
+    //反転した数だけ石の数を調整
+		black += numReversed * player;
+		white -= numReversed * player;
+    return (numReversed > 0);
   }
 
   //その位置に置けるか判定する(reserveメソッドで判定．置き換え処理はしない?)
@@ -153,24 +130,8 @@ public class GameState {
     return true;
   }
 
-  //双方の駒の数をカウントするメソッド
-  public void countDisc() {
-    black = 0;
-    white = 0;
-    for(int y = 1; y < SIZE-1; y++) {
-      for(int x = 1; x < SIZE-1; x++) {
-        if(data[at(x, y)] == 1) {
-          black++;
-        } else if(data[at(x, y)] == -1) {
-          white++;
-        }
-      }
-    }
-  }
-
   //勝者を返すメソッド
   public int Win() {
-    countDisc();
     if(black > white) {
       return 1;
     } else if(black < white) {
@@ -201,13 +162,14 @@ public class GameState {
     data[at(SIZE/2-1, SIZE/2-1)] = WHITE;
     white++;
 
-    turn = 0;
     player = 1;
     isLastPass = false;
+		zobhash = Zobrist.makeZob(data, player);
   }
 
-  public void Pass() {
+  public void pass() {
     player *= -1;
+		zobhash = Zobrist.color(zobhash);
     isLastPass = true;
   }
 
@@ -219,32 +181,43 @@ public class GameState {
         System.out.print("|");
         switch(data[x + y * 10]) {
         case 1:
-          System.out.println("●");
+          System.out.print("●");
           break;
         case -1:
-          System.out.println("○");
+          System.out.print("○");
           break;
         default:
-          System.out.println(" ");
+          System.out.print(" ");
         }
       }
       System.out.println("|");
     }
-    System.out.println("TURN = " + turn);
+    System.out.println("TURN = " + getTurn());
     System.out.println("PLAYER = " + player);
     System.out.println("DISC = " + black + " : " + white);
     System.out.println("");
   }
 
   //置ける場所をArrayListで返す関数
-  public ArrayList<int[]> putPoint() {
+  public ArrayList<int[]> putPoint(boolean withZobhash) {
     ArrayList<int[]> array = new ArrayList<int[]>();
     for(int y = 1; y < SIZE-1; y++) {
       for(int x = 1; x < SIZE-1; x++) {
         if(!canReverse(x, y)) continue;
-        array.add(new int[] {x, y});
-      }
+
+				if (withZobhash) {
+					GameState next = clone();
+					next.put(x, y);
+					array.add(new int[] {x, y, next.zobhash});
+				} else {
+					array.add(new int[] {x, y});
+				}
+			}
     }
     return array;
   }
+
+	public int getTurn() {
+		return black + white - 4;
+	}
 }

@@ -17,7 +17,7 @@ public class mcCPU extends CPU {
   @Override
   int[] decide(GameState state) {
     //置ける場所を記憶するリスト
-    ArrayList<int[]> array = state.putPoint();
+    ArrayList<int[]> array = state.putPoint(false);
 
     //置ける場所がない場合は座標が{-1, -1}として返す
     if(array.size() <= 0) {
@@ -52,12 +52,12 @@ public class mcCPU extends CPU {
   //完全にランダムプレイ
   void playout(GameState state) {
     while(true) {
-      ArrayList<int[]> array = state.putPoint();
+      ArrayList<int[]> array = state.putPoint(false);
 
       if(array.size() == 0) {
         //置けなければパス
         if(state.isLastPass) return;
-        state.Pass();
+        state.pass();
       } else {
         int selected = rnd.nextInt(array.size());
         int[] a = array.get(selected);

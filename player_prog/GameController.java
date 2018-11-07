@@ -54,7 +54,7 @@ public class GameController {
       //置く場所がなければパス
       if(state.checkPass()) {
         if (state.isLastPass) break;
-        state.Pass();
+        state.pass();
         continue;
       }
 

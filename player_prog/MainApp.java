@@ -7,17 +7,17 @@ public class MainApp {
     GameController panel = new GameController(gamecount, b_cpu, w_cpu);
   }
 
-  private static void middleBoardGame(int gamecount) {
-    GetState gstate = new GetState(gamecount);
-    for (int i = 0; i < GetState.bnum; i++) {
+  private static void middleBoardGame(int gamecount) throws Exception{
+    for (int i = 0; i < gamecount; i++) {
+      GetState gstate = new GetState(gamecount);
       System.out.println();
       System.out.println("------");
       System.out.println("gamecount : " + i);
-      System.out.println("b_cpu : " + GetState.b_cpu[i]);
-      System.out.println("w_cpu : " + GetState.w_cpu[i]);
-      System.out.println("turn : " + GetState.turn[i]);
+      System.out.println("b_cpu : " + gstate.b_cpu);
+      System.out.println("w_cpu : " + gstate.w_cpu);
+      System.out.println("turn : " + gstate.turn);
       System.out.println("------");
-      GameController3 panel = new GameController3(i);
+      GameController3 panel = new GameController3(i, gstate.b_cpu, gstate.w_cpu, gstate.turn);
     }
   }
 
