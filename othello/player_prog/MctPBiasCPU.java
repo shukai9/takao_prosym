@@ -7,8 +7,8 @@ public class MctPBiasCPU extends mctCPU {
 
   //クラスを作成する際に，どちらのプレイヤーか選択
   public MctPBiasCPU(int c, int evSelect, int seed, double softmaxBase) {
-		super(c, seed, new MctParams(100, 100, false, 30, 0.18, evSelect == 0 ? 1.69 : 100.0));
-		ev = ShiotaEv.evaluatorFactor(evSelect, seed);
+		super(c, seed, new MctParams(1000, 100, true, 10, 1.0, 2.47));
+		ev = ZebraEv.evaluatorFactory(0);
 		this.softmaxBase = softmaxBase;
   }
 

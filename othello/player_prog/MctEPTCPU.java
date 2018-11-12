@@ -7,9 +7,9 @@ public class MctEPTCPU extends mctCPU {
 
   //クラスを作成する際に，どちらのプレイヤーか選択
   public MctEPTCPU(int c, int evSelect, int seed, int depth) {
-		super(c, seed, new MctParams(100, 100, false, 30, 0.18, evSelect == 0 ? 1.69 : 100.0));
-		ev = ShiotaEv.evaluatorFactor(evSelect, seed);
-		// ev = ZebraEv.evaluatorFactory(0);
+		super(c, seed, new MctParams(10000, 100, true, 10, 1.0, 2.47));
+	//	ev = ShiotaEv.evaluatorFactor(evSelect, seed);
+		 ev = ZebraEv.evaluatorFactory(0);
 		this.depth = depth;
   }
 
