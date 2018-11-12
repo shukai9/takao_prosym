@@ -1,0 +1,719 @@
+11/7 通常盤面でのレートを求める runscript2.py
+
+black : random100, white : random100
+
+---Loop END---
+Black win : 50
+White win : 46
+Draw      : 4
+
+black : hyouka-0-100, white : random100
+
+---Loop END---
+Black win : 92
+White win : 8
+Draw      : 0
+
+black : hyouka-1-100, white : random100
+
+---Loop END---
+Black win : 92
+White win : 8
+Draw      : 0
+
+black : MC-100, white : random100
+
+---Loop END---
+Black win : 93
+White win : 5
+Draw      : 2
+
+black : MCT, white : random100
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : MCT2, white : random100
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : MCT+CF, white : random100
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : MCT+CF2, white : random100
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : AlphaBeta1, white : random100
+
+---Loop END---
+Black win : 98
+White win : 1
+Draw      : 1
+
+black : AlphaBeta2, white : random100
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : random100, white : hyouka-0-100
+
+---Loop END---
+Black win : 7
+White win : 91
+Draw      : 2
+
+black : hyouka-0-100, white : hyouka-0-100
+
+---Loop END---
+Black win : 49
+White win : 46
+Draw      : 5
+
+black : hyouka-1-100, white : hyouka-0-100
+
+---Loop END---
+Black win : 49
+White win : 46
+Draw      : 5
+
+black : MC-100, white : hyouka-0-100
+
+---Loop END---
+Black win : 46
+White win : 54
+Draw      : 0
+
+black : MCT, white : hyouka-0-100
+something wrong
+
+---Loop END---
+Black win : 94
+White win : 5
+Draw      : 1
+
+black : MCT2, white : hyouka-0-100
+
+---Loop END---
+Black win : 96
+White win : 4
+Draw      : 0
+
+black : MCT+CF, white : hyouka-0-100
+
+---Loop END---
+Black win : 94
+White win : 6
+Draw      : 0
+
+black : MCT+CF2, white : hyouka-0-100
+
+---Loop END---
+Black win : 97
+White win : 1
+Draw      : 2
+
+black : AlphaBeta1, white : hyouka-0-100
+
+---Loop END---
+Black win : 76
+White win : 20
+Draw      : 4
+
+black : AlphaBeta2, white : hyouka-0-100
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : random100, white : hyouka-1-100
+
+---Loop END---
+Black win : 7
+White win : 91
+Draw      : 2
+
+black : hyouka-0-100, white : hyouka-1-100
+
+---Loop END---
+Black win : 49
+White win : 46
+Draw      : 5
+
+black : hyouka-1-100, white : hyouka-1-100
+
+---Loop END---
+Black win : 49
+White win : 46
+Draw      : 5
+
+black : MC-100, white : hyouka-1-100
+
+---Loop END---
+Black win : 46
+White win : 54
+Draw      : 0
+
+black : MCT, white : hyouka-1-100
+something wrong
+
+---Loop END---
+Black win : 94
+White win : 5
+Draw      : 1
+
+black : MCT2, white : hyouka-1-100
+
+---Loop END---
+Black win : 98
+White win : 2
+Draw      : 0
+
+black : MCT+CF, white : hyouka-1-100
+
+---Loop END---
+Black win : 96
+White win : 3
+Draw      : 1
+
+black : MCT+CF2, white : hyouka-1-100
+
+---Loop END---
+Black win : 97
+White win : 2
+Draw      : 1
+
+black : AlphaBeta1, white : hyouka-1-100
+
+---Loop END---
+Black win : 76
+White win : 20
+Draw      : 4
+
+black : AlphaBeta2, white : hyouka-1-100
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : random100, white : MC-100
+
+---Loop END---
+Black win : 8
+White win : 91
+Draw      : 1
+
+black : hyouka-0-100, white : MC-100
+
+---Loop END---
+Black win : 43
+White win : 53
+Draw      : 4
+
+black : hyouka-1-100, white : MC-100
+
+---Loop END---
+Black win : 43
+White win : 53
+Draw      : 4
+
+black : MC-100, white : MC-100
+
+---Loop END---
+Black win : 48
+White win : 51
+Draw      : 1
+
+black : MCT, white : MC-100
+
+---Loop END---
+Black win : 96
+White win : 4
+Draw      : 0
+
+black : MCT2, white : MC-100
+
+---Loop END---
+Black win : 97
+White win : 3
+Draw      : 0
+
+black : MCT+CF, white : MC-100
+
+---Loop END---
+Black win : 87
+White win : 13
+Draw      : 0
+
+black : MCT+CF2, white : MC-100
+
+---Loop END---
+Black win : 96
+White win : 4
+Draw      : 0
+
+black : AlphaBeta1, white : MC-100
+
+---Loop END---
+Black win : 76
+White win : 23
+Draw      : 1
+
+black : AlphaBeta2, white : MC-100
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : random100, white : MCT
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : hyouka-0-100, white : MCT
+
+---Loop END---
+Black win : 3
+White win : 97
+Draw      : 0
+
+black : hyouka-1-100, white : MCT
+
+---Loop END---
+Black win : 3
+White win : 97
+Draw      : 0
+
+black : MC-100, white : MCT
+
+---Loop END---
+Black win : 6
+White win : 94
+Draw      : 0
+
+black : MCT, white : MCT
+
+---Loop END---
+Black win : 61
+White win : 39
+Draw      : 0
+
+black : MCT2, white : MCT
+
+---Loop END---
+Black win : 70
+White win : 30
+Draw      : 0
+
+black : MCT+CF, white : MCT
+
+---Loop END---
+Black win : 51
+White win : 49
+Draw      : 0
+
+black : MCT+CF2, white : MCT
+
+---Loop END---
+Black win : 76
+White win : 24
+Draw      : 0
+
+black : AlphaBeta1, white : MCT
+
+---Loop END---
+Black win : 32
+White win : 68
+Draw      : 0
+
+black : AlphaBeta2, white : MCT
+something wrong
+something wrong
+
+---Loop END---
+Black win : 96
+White win : 3
+Draw      : 1
+
+black : random100, white : MCT2
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : hyouka-0-100, white : MCT2
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : hyouka-1-100, white : MCT2
+
+---Loop END---
+Black win : 2
+White win : 98
+Draw      : 0
+
+black : MC-100, white : MCT2
+
+---Loop END---
+Black win : 1
+White win : 99
+Draw      : 0
+
+black : MCT, white : MCT2
+
+---Loop END---
+Black win : 20
+White win : 79
+Draw      : 1
+
+black : MCT2, white : MCT2
+
+---Loop END---
+Black win : 41
+White win : 59
+Draw      : 0
+
+black : MCT+CF, white : MCT2
+something wrong
+
+---Loop END---
+Black win : 40
+White win : 60
+Draw      : 0
+
+black : MCT+CF2, white : MCT2
+something wrong
+
+---Loop END---
+Black win : 65
+White win : 33
+Draw      : 2
+
+black : AlphaBeta1, white : MCT2
+
+---Loop END---
+Black win : 29
+White win : 71
+Draw      : 0
+
+black : AlphaBeta2, white : MCT2
+something wrong
+
+---Loop END---
+Black win : 92
+White win : 8
+Draw      : 0
+
+black : random100, white : MCT+CF
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : hyouka-0-100, white : MCT+CF
+
+---Loop END---
+Black win : 2
+White win : 96
+Draw      : 2
+
+black : hyouka-1-100, white : MCT+CF
+
+---Loop END---
+Black win : 2
+White win : 97
+Draw      : 1
+
+black : MC-100, white : MCT+CF
+
+---Loop END---
+Black win : 4
+White win : 96
+Draw      : 0
+
+black : MCT, white : MCT+CF
+
+---Loop END---
+Black win : 39
+White win : 59
+Draw      : 2
+
+black : MCT2, white : MCT+CF
+
+---Loop END---
+Black win : 65
+White win : 35
+Draw      : 0
+
+black : MCT+CF, white : MCT+CF
+
+---Loop END---
+Black win : 64
+White win : 36
+Draw      : 0
+
+black : MCT+CF2, white : MCT+CF
+
+---Loop END---
+Black win : 64
+White win : 36
+Draw      : 0
+
+black : AlphaBeta1, white : MCT+CF
+
+---Loop END---
+Black win : 40
+White win : 58
+Draw      : 2
+
+black : AlphaBeta2, white : MCT+CF
+
+---Loop END---
+Black win : 92
+White win : 6
+Draw      : 2
+
+black : random100, white : MCT+CF2
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : hyouka-0-100, white : MCT+CF2
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : hyouka-1-100, white : MCT+CF2
+
+---Loop END---
+Black win : 1
+White win : 99
+Draw      : 0
+
+black : MC-100, white : MCT+CF2
+
+---Loop END---
+Black win : 1
+White win : 99
+Draw      : 0
+
+black : MCT, white : MCT+CF2
+
+---Loop END---
+Black win : 10
+White win : 90
+Draw      : 0
+
+black : MCT2, white : MCT+CF2
+
+---Loop END---
+Black win : 36
+White win : 63
+Draw      : 1
+
+black : MCT+CF, white : MCT+CF2
+
+---Loop END---
+Black win : 35
+White win : 65
+Draw      : 0
+
+black : MCT+CF2, white : MCT+CF2
+
+---Loop END---
+Black win : 49
+White win : 50
+Draw      : 1
+
+black : AlphaBeta1, white : MCT+CF2
+
+---Loop END---
+Black win : 36
+White win : 63
+Draw      : 1
+
+black : AlphaBeta2, white : MCT+CF2
+something wrong
+something wrong
+
+---Loop END---
+Black win : 94
+White win : 5
+Draw      : 1
+
+black : random100, white : AlphaBeta1
+
+---Loop END---
+Black win : 2
+White win : 97
+Draw      : 1
+
+black : hyouka-0-100, white : AlphaBeta1
+
+---Loop END---
+Black win : 17
+White win : 83
+Draw      : 0
+
+black : hyouka-1-100, white : AlphaBeta1
+
+---Loop END---
+Black win : 17
+White win : 83
+Draw      : 0
+
+black : MC-100, white : AlphaBeta1
+
+---Loop END---
+Black win : 22
+White win : 76
+Draw      : 2
+
+black : MCT, white : AlphaBeta1
+
+---Loop END---
+Black win : 68
+White win : 32
+Draw      : 0
+
+black : MCT2, white : AlphaBeta1
+something wrong
+
+---Loop END---
+Black win : 76
+White win : 23
+Draw      : 1
+
+black : MCT+CF, white : AlphaBeta1
+
+---Loop END---
+Black win : 62
+White win : 37
+Draw      : 1
+
+black : MCT+CF2, white : AlphaBeta1
+
+---Loop END---
+Black win : 67
+White win : 33
+Draw      : 0
+
+black : AlphaBeta1, white : AlphaBeta1
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
+
+black : AlphaBeta2, white : AlphaBeta1
+
+---Loop END---
+Black win : 0
+White win : 0
+Draw      : 100
+
+black : random100, white : AlphaBeta2
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : hyouka-0-100, white : AlphaBeta2
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : hyouka-1-100, white : AlphaBeta2
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : MC-100, white : AlphaBeta2
+
+---Loop END---
+Black win : 1
+White win : 99
+Draw      : 0
+
+black : MCT, white : AlphaBeta2
+
+---Loop END---
+Black win : 4
+White win : 95
+Draw      : 1
+
+black : MCT2, white : AlphaBeta2
+
+---Loop END---
+Black win : 7
+White win : 92
+Draw      : 1
+
+black : MCT+CF, white : AlphaBeta2
+something wrong
+something wrong
+something wrong
+something wrong
+something wrong
+something wrong
+
+---Loop END---
+Black win : 6
+White win : 93
+Draw      : 1
+
+black : MCT+CF2, white : AlphaBeta2
+something wrong
+something wrong
+
+---Loop END---
+Black win : 6
+White win : 94
+Draw      : 0
+
+black : AlphaBeta1, white : AlphaBeta2
+
+---Loop END---
+Black win : 0
+White win : 100
+Draw      : 0
+
+black : AlphaBeta2, white : AlphaBeta2
+
+---Loop END---
+Black win : 100
+White win : 0
+Draw      : 0
