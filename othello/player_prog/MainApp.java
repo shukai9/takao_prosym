@@ -9,13 +9,13 @@ public class MainApp {
 
   private static void middleBoardGame(int gamecount) throws Exception{
     for (int i = 1; i <= gamecount; i++) {
-      GetState gstate = new GetState(gamecount);
       System.out.println();
       System.out.println("//------");
       System.out.println("//gamecount : " + i);
-      System.out.println("//b_cpu : " + gstate.b_cpu);
-      System.out.println("//w_cpu : " + gstate.w_cpu);
-      System.out.println("//turn : " + gstate.turn);
+      // System.out.println("//b_cpu : " + gstate.b_cpu);
+      // System.out.println("//w_cpu : " + gstate.w_cpu);
+      // System.out.println("//turn : " + gstate.turn);
+      GetState gstate = new GetState(gamecount);
       System.out.println("//------");
       GameController3 panel = new GameController3(i, gstate.b_cpu, gstate.w_cpu, gstate.turn);
     }

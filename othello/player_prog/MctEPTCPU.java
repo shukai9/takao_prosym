@@ -6,10 +6,11 @@ public class MctEPTCPU extends mctCPU {
 	int depth;
 
   //クラスを作成する際に，どちらのプレイヤーか選択
-  public MctEPTCPU(int c, int evSelect, int seed, int depth) {
-		super(c, seed, new MctParams(10000, 100, true, 10, 1.0, 2.47));
-	//	ev = ShiotaEv.evaluatorFactor(evSelect, seed);
-		 ev = ZebraEv.evaluatorFactory(0);
+  public MctEPTCPU(int c, int evSelect, int seed, int depth, int count, long time, boolean switch_threshold,
+									 int threshold, double param_c, double param_fpu) {
+		super(c, seed, new MctParams(count, time, switch_threshold, threshold, param_c, param_fpu));
+	if (evSelect == 0)	ev = ShiotaEv.evaluatorFactor(evSelect, seed);
+	else if(evSelect == 1)	ev = ZebraEv.evaluatorFactory(0);
 		this.depth = depth;
   }
 

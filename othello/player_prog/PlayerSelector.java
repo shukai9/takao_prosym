@@ -5,17 +5,13 @@ class PlayerSelector {
       return new mcCPU(playerID, seed);
     }
     if (playername.equals("MCT")) {
-      return new mctCPU(playerID, 100, new mctCPU.MctParams(1000, 300, true, 10, 1.0, 2.47));
+      return new mctCPU(playerID, 100, new mctCPU.MctParams(100, 320, true, 10, 1.0, 2.47));
     }
-    if (playername.equals("MCT2")) {
-      return new mctCPU(playerID, 100, new mctCPU.MctParams(100, 100, false, 39, 0.39, 2.47));
-    }
-    if (playername.equals("MCT+CF")) {
+    // EPT_MCT???
+    if (playername.substring(0, 7).equals("EPT_MCT")) {
       // return new MctPBiasCPU(playerID, 0, 100, 1.4);
-			return new MctEPTCPU(playerID, 0, 100, 1);
-    }
-    if (playername.equals("MCT+CF2")) {
-      return new MctPBiasCPU(playerID, 1, 100, 1.0108892860517004600204097905619);
+      int count = Integer.parseInt(playername.substring(7));
+			return new MctEPTCPU(playerID, 1, 100, 1, count, 100, true, 10, 1.0, 2.47);
     }
     if (playername.equals("AlphaBeta1")) {
       return new AlphaBetaPlayer(playerID, 1, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
@@ -23,8 +19,8 @@ class PlayerSelector {
     if (playername.equals("AlphaBeta2")) {
       return new AlphaBetaPlayer(playerID, 2, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
     }
-    if (playername.equals("AlphaBeta3")) {
-      return new AlphaBetaPlayer(playerID, 3, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
+    if (playername.equals("AlphaBeta4")) {
+      return new AlphaBetaPlayer(playerID, 4, 0); // (先攻後攻, 探索の深さ, パターン(デフォルトが0))
     }
     // random????  ???? = seed
     if (playername.substring(0, 6).equals("random")) {

@@ -79,6 +79,23 @@ public class GameController3 {
         }
         System.out.println("}");
         System.out.println();
+        //ゲーム終了時
+        System.out.println("//moves: " + movesequence);
+        switch (state.Win()) {
+        case 1:
+          winCount[0] ++;
+          // System.out.println("//endgame: black win");
+          break;
+        case -1:
+          winCount[1] ++;
+          //System.out.println("//endgame: white win");
+          break;
+        case 0:
+          winCount[2] ++;
+          //System.out.println("//endgame: draw");
+          break;
+        }
+        System.out.println();
         break;
       }
     }

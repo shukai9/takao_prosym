@@ -1,0 +1,972 @@
+Loop Start !
+starting game: 1
+moves: e7e8h4c7c5g2g1f1c8d7a3b7h7b6b8h2d8a8a7h3h1a4g8a6b3a2
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA random100, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7h3g2h1c5d8d7b3b7f1b6a3a4c7a6h2h4h7a2a8c8b8g8g1e8a7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA random100, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g1a6h3h2a2b6b7g2a7f1h1a4a3c5d8h7b3c7g8a8b8h4e8d7c8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA random100, MC-100 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7e8h4g2c5d7d8a2g1c8c7b8b7a8b3h3h7g8a4a3a6h1f1b6h2a7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA random100, MCT : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7h3g2h4b7c5a6h2a4h1g1f1a2b3a3d7c8a8c7d8e8b6b8a7h7g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA random100, EPT_MCT1730 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g2g1b3a6c5a2d7a4g8b6b7b8a8c8d8e8c7h1h2h7h4f1a3h3a7
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA random100, EPT_MCT8500 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7b3a2c5h3h4a3b6a7a6a4g2b7c7h1g1h2f1c8d7d8a8h7e8b8g8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA random100, AlphaBeta1 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7b3a2c5h3h4a3c7b6d7b7a8b8c8e8d8h7a7a6a4g1g2g8f1h1h2
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA random100, AlphaBeta2 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g2g1h4b6d7b3a6c5h3e8c7c8h7b7a4a3a8a7a2h2b8d8g8f1h1
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA random100, AlphaBeta4 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4h3b6g1a6b3f1d7c5a4h1g2c7e8h2e7h7b7a2a7a8c8b8g8d8a3
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA hyouka-0-100, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4e8h7d7c8e7b6b3a3c7a4f1g1a2a6h3h2g8c5b7d8b8a8a7g2h1
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA hyouka-0-100, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4g2b6h3a6a7h1f1h2c5h7b7g1b3a2d7e7a3a4e8c8c7d8a8b8g8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA hyouka-0-100, MC-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4g2b6g1c5h3a6b7a4d7h7b3h2h1a3f1e8c7a8e7d8a7b8c8a2g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA hyouka-0-100, MCT : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4b3d7c7c5d8e7g2a6b6h7e8a3a4h3g1h2a2c8g8a7a8b8b7f1h1
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA hyouka-0-100, EPT_MCT1730 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4b3d7c7c5g2a6h3c8b6h7e7h2e8a3d8b8a4a7a8b7h1f1g1a2g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA hyouka-0-100, EPT_MCT8500 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4b3d7e7c5e8c7d8a2h7a4g8a6g1f1h2h1h3c8g2b7b6a3a7a8b8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA hyouka-0-100, AlphaBeta1 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4b3d7e7c5d8c7b7a2a3a6a4c8b8b6g8h7h2g2h1g1h3f1a8a7e8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA hyouka-0-100, AlphaBeta2 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h4c7c5h3e7d7h7h2h1g2c8b7a3a4a8b6a6g8b3b8d8e8a7a2f1g1
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA hyouka-0-100, AlphaBeta4 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3c7b7b6h3f1g1b8g2a2a3h1a4d7h2c5a6e8a7h7h4g8e7d8c8a8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MC-100, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3d7a4e8c5a2a3f1g1h2g2h1a6h3h4h7b7a8c7b8e7b6a7g8d8c8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MC-100, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3g2h4a2f1g1h1h2a3c7h3a4c5d7a6b6a7b7e7a8h7b8c8d8e8g8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MC-100, MC-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3h3h2f1g2e7g1c5a3h1a6b6c7a4h4c8d7d8b8a8a7b7h7a2e8g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MC-100, MCT : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3c5h3h4a4c7b6a3h7e7b8c8b7a8d8e8d7g8a7a6a2g1f1g2h1h2
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MC-100, EPT_MCT1730 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3c5h3h4a4c7b6a3h7e7b8c8b7a8d8d7a6a7e8f1g1g8a2g2h2
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MC-100, EPT_MCT8500 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3c5h3h4a4a2a3g2f1h1g1h7a6g8b6e8d7c7b7e7d8a8a7c8b8h2
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MC-100, AlphaBeta1 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3c5h3h4a4c7b6a3h7e7b8c8b7a8d8d7a6a7e8f1g1g8a2g2h2
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MC-100, AlphaBeta2 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: b3c5h3a2a3h4a6a7b6e7h7d7c7e8d8c8b8g8g1f1a8h1a4b7h2g2
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MC-100, AlphaBeta4 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6a7b3a4b7h2b6e8h4c7h7g2g1a3c5h3c8g8d8d7h1f1a2e7a8b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MCT, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6b6a4g1f1h3g2b3a2h1h2d7b7a3c5c7d8e8e7c8b8a8h4g8a7h7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MCT, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6a7b3g2g1f1b7h1e7h7a4c5h4a8d7a3a2d8c7h2h3b6b8c8e8g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MCT, MC-100 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6g2a4f1h3d7g1h1c7b7b6g8b8b3d8a8h4h2c5e7a2a3c8a7e8h7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MCT, MCT : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6c5a4h2h3h4e7g2h7d7b6c7h1b3a2b7d8b8a7a8c8a3e8f1g1g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MCT, EPT_MCT1730 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6h3b3c5h4a4h7g2h1e7b6f1d8a7g1h2d7c7e8b7a8b8a2a3c8g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MCT, EPT_MCT8500 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6a4h7a7h4b3a2c5b6e7e8d7c7c8d8b7a8b8a3h2h3g1f1g8h1g2
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MCT, AlphaBeta1 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6c5a4c7b6b3a3f1d8h4g2c8g1h3e7h7b8h1h2d7e8g8a8a2a7b7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA MCT, AlphaBeta2 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: a6c5a4h2h3h4e7g2h7c7c8d7e8f1h1g1b6b7d8a8a7a3b3a2b8g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA MCT, AlphaBeta4 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7e8c5d7h7g8a3b3a4g2h2g1c8a2f1d8h1b8a6b6h3h4a7b7c7a8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT1730, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7h3h7b3c5c7a2d7a3f1g1e8g2h1h4a4h2g8a6b6a7b7a8b8c8d8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT1730, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g1f1d7h1g2h2b3a2d8h3h4a4a3c5c7a6b6a7b7h7e8a8b8c8g8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT1730, MC-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7e8c5f1g1a2a3g2h2h1h3h4b6d7d8c7c8a6a4b7a8b3g8a7h7b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT1730, MCT : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7h3h7b3c5c7a2d8g2h1h4h2a3d7e8a4a6b6a7g8c8f1g1b7a8b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT1730, EPT_MCT1730 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g2h4b3c5d7a2h2a3b6h3f1g1h1a6a7b7a8c7b8h7a4c8d8e8g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA EPT_MCT1730, EPT_MCT8500 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7b3a2c5h4h2h3g2f1h1g1h7a4g8c7b7a6b8b6e8d7d8a8a3c8a7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT1730, AlphaBeta1 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7b3a2c5h4d7c8f1g1d8e8g2a3h3c7b7a4b6a6a8a7g8h1b8h2h7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT1730, AlphaBeta2 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g2h4f1b3c5a4d7a6h3h7d8h1g8c8h2e8a3a2b6c7a7b7a8g1b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT1730, AlphaBeta4 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7h3b6g1f1b3c5e7h1a7a2c7h2g8a3d8e8a4h4d7a6b7a8g2b8c8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7e8b6c7a4a3c5h3d7b7g8f1h4b3a2d8g1e7h2g2a6a7h1a8b8c8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7g2b6b7c5a2f1g8h1b3a3d7a4g1h2h3h4e8a6a7c7e7a8b8c8d8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, MC-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7g1f1g2b3e7h1g8h2d7h3a2a3h4c5a4a6b6a7b7c7a8b8c8d8e8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, MCT : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7b3a2c5c7g2h1f1a3g1a4a6b6c8a7d7b7a8h2h3h4g8e7d8e8b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, EPT_MCT1730 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7b3a2c5c7b7a3b6a8g2a4g1f1a6h1e7d7d8h2h3h4a7b8c8e8g8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, EPT_MCT8500 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7b3a2c5c7h2a3b7a8a4b6c8d7g1h3h4h1f1g2g8a6e7d8b8e8a7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, AlphaBeta1 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7h2h3h4b6g2c5f1d7b3a2c8d8a7a6b7a8e7b8c7g1h1a4g8e8a3
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, AlphaBeta2 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: h7f1b6h4c5d7a3c7d8c8e7g8h3g2g1e8h2h1b7a2b3a8a7a4a6b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA EPT_MCT8500, AlphaBeta4 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7e8h7f1h4g2h3a2b3c5a4h2g1g8a3h1a6d8d7c8c7b8b7a7a8b6
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta1, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7h3h4b3a6c5a2e8h7g8h2d7c8a3d8f1g1c7b8a7b7a8a4b6g2h1
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta1, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g1f1d7h4h2h1h7g2b3h3c8c7e8g8a6a4a2a3b6c5b8a7a8b7d8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta1, MC-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7e8h7g2c5c7g8b3d7b6a2f1a3c8d8a4h3h2h4g1h1b7a6a7a8b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta1, MCT : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7h3h4g2h1f1h2g1b6b7c5c7d7b3a2c8a8a7a6h7b8d8e8a3a4g8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta1, EPT_MCT1730 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g2c5b3a2b6c7b7h7a3a4d7d8e8g8g1h1c8a6a7b8h2h4f1h3a8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta1, EPT_MCT8500 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7b3c5d7a2b6a3e8g8h7h3h4c8d8a7a6a4g1b7g2f1b8a8h2h1c7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta1, AlphaBeta1 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7b3c5d7a2b6a3a4h4h3h7c7d8c8a7a6g2a8b7b8h2e8h1g1f1g8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA AlphaBeta1, AlphaBeta2 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: e7g2c5b3a2b6c7b7h7f1a3a4h3h4a8d7a7a6d8h2h1g1e8c8g8b8
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA AlphaBeta1, AlphaBeta4 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5e8g8d7a3a4h7b6e7g1h4a2b3h3d8c7h2c8f1g2a6b7h1a8a7b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta2, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5c7h7f1b3a3a2d7a4g2a6b6e7d8a7e8g8h1g1h2h3h4c8b7a8b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta2, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5f1b6g2e7b3a2d8e8c7d7h7g8a3h1h2c8b7a4a6a8a7b8g1h3h4
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta2, MC-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5h2b6e7h7e8g8a6h4g2d8d7h3f1h1a2b3a3c7b7g1c8a4a7a8b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta2, MCT : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5g2b6f1e7b3a2a7a3b7h3h4h7c7d7c8h1d8e8g1h2a4a6g8b8a8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta2, EPT_MCT1730 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5g2b6b3a2b7h7g1f1c7d7g8h4a3e7h2h1e8h3a8a7a4a6c8b8d8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta2, EPT_MCT8500 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5b3a2h2a3g2h7f1c7b7a8a4b6c8a6d7h3h4h1g1e8e7d8b8g8a7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta2, AlphaBeta1 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5c7h7g2a4a3e7d7h1d8e8f1b3g1h2h3h4g8a6a2b6a7a8b7c8b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta2, AlphaBeta2 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5h2b6e7h7d7h3h4h1a6e8d8c8g8c7b3a3a4a7a2a8g2f1b8b7g1
+endgame: white win
+
+---Loop END---
+Black win : 0
+White win : 1
+Draw      : 0
+PLAYDATA AlphaBeta2, AlphaBeta4 : 0, 1, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5e8g8d7h7c7h4b3e7h2h3f1g1g2a2a3d8b6h1a7b7a8b8a6a4c8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, random100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5c7h7f1b3a3a2d7a4g2a6b6e7d8a7e8h3h4g1h1h2g8b7a8c8b8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, hyouka-0-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5f1e7h2b6b7b3g8c7a2h7d7g1g2h4h3h1e8d8c8a3a4a6b8a7a8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, MC-100 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5h2b6e7a6g2h1b7h3g8a4f1g1a3a2b3h4c7e8d7d8a7a8b8c8h7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, MCT : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5g2e7b3a2b6h4g1f1h3c7g8h1c8h2a3h7e8d7d8a4b8b7a8a7a6
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, EPT_MCT1730 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5g2e7b3a2b6h4d7h1g1f1d8h7a3e8g8h2h3c8c7b8b7a4a6a7a8
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, EPT_MCT8500 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5b3a2h2c7a3a6b7a4b6d7e8g8e7h7g1f1g2h1b8c8d8a8h4h3a7
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, AlphaBeta1 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5c7h7g2a4a3e7d7a6a7b3d8h1g8h2e8h4f1b6g1h3b7c8b8a8a2
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, AlphaBeta2 : 1, 0, 0
+BoardNumber : 34
+
+Loop Start !
+starting game: 1
+moves: c5h2b6e7a6a7a4a3e8d7d8g2h4h3c7f1h7b7a8b8c8g8g1a2b3h1
+endgame: black win
+
+---Loop END---
+Black win : 1
+White win : 0
+Draw      : 0
+PLAYDATA AlphaBeta4, AlphaBeta4 : 1, 0, 0
+BoardNumber : 34
+
