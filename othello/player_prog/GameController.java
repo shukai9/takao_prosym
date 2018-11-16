@@ -37,7 +37,7 @@ public class GameController {
     System.out.println("Black win : " + winCount[0]);
     System.out.println("White win : " + winCount[1]);
     System.out.println("Draw      : " + winCount[2]);
-    System.out.println("PLAYDATA " + bcpu_name + ", " + wcpu_name + " : " + winCount[0] + ", " + winCount[1] + ", " + winCount[2]);
+    System.out.println("PLAYDATA " + "Board" + boardnum + ", " + bcpu_name + ", " + wcpu_name + " : " + winCount[0] + ", " + winCount[1] + ", " + winCount[2]);
   }
 
   void addMove(StringBuffer movesequence, int[] action) {
