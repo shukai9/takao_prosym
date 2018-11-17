@@ -1,14 +1,17 @@
-# python 2.7.10
+# python 3
 # -*- coding: utf-8 -*-
 import re
+import pandas as pd
+import openpyxl
 
 player = ["random100", "hyouka-0-100", "MC-100", "MCT", "EPT_MCT1730", "EPT_MCT8500", "AlphaBeta1", "AlphaBeta2", "AlphaBeta4"]
+
 
 file = open("test.txt", "r")
 excel = open("excel.txt", "w")
 
 string = file.readlines()
-s1 = ""
+s1 = "board"
 for i in range(len(player)):
     s1 = s1 + " " + player[i]
 s1 = s1 + "\n"
