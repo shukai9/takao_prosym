@@ -90,8 +90,10 @@ public class Trate {
 			PlayLog log = logs.get(index);
 			PlayerInfo player1 = players[log.player1];
 			PlayerInfo player2 = players[log.player2];
-			double Ea = 1 / (1 + Math.pow(10, (player2.rate - player1.rate) / 400) - Math.log(pa/(1-pa)));
-			double Eb = 1 / (1 + Math.pow(10, (player1.rate - player2.rate) / 400) - Math.log(pb/(1-pb)));
+	
+			System.out.println("isPlayer1Win : " + log.isPlayer1Win);
+			double Ea = 1 / (1 + Math.pow(10, (player2.rate - player1.rate) / 400 - Math.log10(pa/(1-pa))));
+			double Eb = 1 / (1 + Math.pow(10, (player1.rate - player2.rate) / 400 - Math.log10(pb/(1-pb))));
 			double new_player1rate, new_player2rate;
 			if (log.isPlayer1Win) {
 				new_player1rate = player1.rate + K * (1 - Ea);
@@ -100,6 +102,7 @@ public class Trate {
 				new_player1rate = player1.rate + K * (0 - Ea);
 				new_player2rate = player2.rate + K * (1 - Eb);
 			}
+
 			// System.out.printf("%s vs %s / win=%s / %s => %8.3f, %s => %8.3f¥n",
 			// 									player1, player2, log.isPlayer1Win ? "p1" : "p2",
 			// 									player1, new_player1rate,
