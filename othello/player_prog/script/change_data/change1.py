@@ -11,6 +11,7 @@ board_data = [130, 452, 789, 680, 891, 544, 954, 995, 361, 673, 52, 399, 417, 63
 for boardnum in range(100):
     file = open("result/board1copy/board{}.txt".format(board_data[boardnum]), "r")
     string = file.readlines()
+    print(board_data[boardnum])
     wb = px.Workbook()
     ws = wb.active
     ws['A1'].value = 'Board{}'.format(board_data[boardnum])
@@ -22,11 +23,18 @@ for boardnum in range(100):
         for j in range(player_len):
             ws.cell(row=j+2, column=1, value=player[j])
             for i in range(player_len):
-                data = string[count].split(":")[1]
-                data = data.replace(" ", "")
-                data = data.replace("\n", "")
-                data = data.replace("\r", "")
-                ws.cell(row=j+2, column=i+2, value=data)
-                count+=1
+                array = string[count].split(":")
+                array_len = len(array)
+                if 0 <= array_len <= 1:
+                    break
+                elif array_len==2:
+                    data = string[count].split(":")[1]
+                    data = data.replace(" ", "")
+                    data = data.replace("\n", "")
+                    data = data.replace("\r", "")
+                    ws.cell(row=j+2, column=i+2, value=data)
+                    count+=1
+                else:
+                    break
     wb.save('result/board1/excel/board{}.xlsx'.format(board_data[boardnum]))
     file.close()
