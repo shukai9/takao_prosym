@@ -90,8 +90,6 @@ public class Trate {
 			PlayLog log = logs.get(index);
 			PlayerInfo player1 = players[log.player1];
 			PlayerInfo player2 = players[log.player2];
-	
-			System.out.println("isPlayer1Win : " + log.isPlayer1Win);
 			double Ea = 1 / (1 + Math.pow(10, (player2.rate - player1.rate) / 400 - Math.log10(pa/(1-pa))));
 			double Eb = 1 / (1 + Math.pow(10, (player1.rate - player2.rate) / 400 - Math.log10(pb/(1-pb))));
 			double new_player1rate, new_player2rate;
